@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mary Ogabo, PHRi | HR Professional Portfolio</title>
+<meta name="description" content="Mary Ogabo, PHRi: HR professional in Lagos with 5+ years in HR operations, employee relations, recruitment and payroll support.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Instrument+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --ivory:#07050B; --paper:#14101C; --ink:#F3EEF9; --muted:#B4AAC6; --line:#2B2338;
+  --navy:#1D0F36; --deep:#05030A; --cobalt:#C77DFF; --gold:#A855F7; --gold2:#E3B5FF;
+  --serif:'Instrument Serif',Georgia,'Times New Roman',serif;
+  --sans:'DM Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+
+[data-theme="light"] {
+  color-scheme:light;
+  --ivory:#F6F2EA; --paper:#FFFFFF; --ink:#101B38; --muted:#4F5A71; --line:#DED7C6;
+  --navy:#0E1834; --deep:#0A1228; --cobalt:#1F43BD; --gold:#C9A24B; --gold2:#E6C777;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--ivory);color:var(--ink);font:17px/1.65 var(--sans);overflow-x:hidden;transition:background .3s,color .3s}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.04;margin:0}
+p{margin:0}a{color:inherit}
+:focus-visible{outline:3px solid var(--cobalt);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+main,header,footer,nav,aside{position:relative;z-index:1}
+section{padding:40px 0}
+h2{font-size:clamp(40px,5.6vw,68px);margin-bottom:20px;letter-spacing:-.01em}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--cobalt);margin-bottom:12px}
+.eyebrow::before{content:"";width:34px;height:2px;background:var(--gold)}
+
+/* Always-Visible Backdrop Image (Perpetual soft background fade) */
+.backdrop{
+  position:fixed;
+  z-index:0;
+  right:max(2vw, calc((100vw - 1240px)/2));
+  bottom:0;
+  height:min(calc(100vh - 80px), 820px);
+  aspect-ratio:900/1543;
+  pointer-events:none;
+  opacity:5.28;
+  will-change:opacity;
+}
+.backdrop::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:46%;
+  width:150%;
+  aspect-ratio:1;
+  transform:translate(-50%,-50%);
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(168,85,247,0.3) 0%, rgba(168,85,247,0.08) 50%, transparent 70%);
+}
+.backdrop img{
+  position:relative;
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:bottom;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 65%, transparent 98%);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 65%, transparent 98%);
+}
+
+/* Mobile & Tablet placement */
+@media (max-width: 900px) {
+  .backdrop{
+    right:50%;
+    transform:translateX(50%);
+    height:70vh;
+    opacity:0.20;
+  }
+}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:30;background:rgba(7,5,11,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+[data-theme="light"] .nav{background:rgba(246,242,234,.82);border-bottom:1px solid rgba(16,27,56,.08)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.nav-actions{display:flex;align-items:center;gap:12px}
+.logo{font-family:var(--serif);font-size:30px;text-decoration:none;letter-spacing:.01em;font-weight:700}
+.logo i{color:var(--cobalt)}
+.nav ul{display:flex;gap:34px;list-style:none;margin:0;padding:0;font-size:15px;font-weight:500}
+.nav ul a{text-decoration:none;position:relative;padding:6px 0}
+.nav ul a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--gold);transition:width .25s}
+.nav ul a:hover::after{width:100%}
+
+/* theme toggle button */
+.theme-btn{background:var(--paper);border:1px solid var(--line);color:var(--ink);padding:8px 14px;border-radius:999px;cursor:pointer;font-size:14px;font-weight:700;display:inline-flex;align-items:center;gap:6px;transition:background .2s,color .2s}
+.theme-btn:hover{background:var(--cobalt);color:var(--deep)}
+
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 26px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;border:2px solid var(--ink);transition:transform .2s,background .2s,color .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.solid{background:var(--cobalt);border-color:var(--cobalt);color:#0A0710}.btn.solid:hover{background:var(--gold2);border-color:var(--gold2)}
+.btn.ghost{background:transparent}.btn.ghost:hover{background:var(--ink);color:#0A0710}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:var(--deep)}.btn.gold:hover{background:var(--gold2);border-color:var(--gold2)}
+.btn.light{border-color:rgba(255,255,255,.55);color:#fff}.btn.light:hover{background:#fff;color:var(--deep)}
+
+/* hero */
+.hero{min-height:auto;display:flex;align-items:center;padding:30px 0 20px}
+.hero .wrap{width:100%}
+.hero-copy{max-width:720px}
+.chip{display:inline-flex;align-items:center;gap:10px;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:7px 16px 7px 10px;font-size:14px;font-weight:700;margin-bottom:16px}
+.chip b{background:var(--cobalt);color:#0A0710;border-radius:999px;padding:2px 10px;font-size:13px;letter-spacing:.04em}
+
+/* Mary Ogabo on one straight bold line */
+.hero h1{
+  display:flex;
+  flex-wrap:nowrap;
+  align-items:baseline;
+  gap:0.25em;
+  font-size:clamp(46px,7.2vw,100px);
+  font-weight:700;
+  letter-spacing:-.02em;
+  white-space:nowrap;
+}
+.hero h1 em{display:inline;font-style:italic;color:var(--cobalt);font-weight:700}
+
+.role{font-size:clamp(18px,2vw,22px);font-weight:500;margin-top:10px;max-width:35ch}
+.lede{max-width:44ch;margin-top:10px;color:var(--muted);font-size:18px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.scroll{display:none}
+
+/* role switch */
+.switch{background:rgba(22,17,32,.8);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.switch .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;padding-top:14px;padding-bottom:14px}
+.switch strong{font-family:var(--serif);font-weight:700;font-size:26px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px}
+.tabs button{font:inherit;font-size:15px;font-weight:500;min-height:44px;padding:0 20px;border-radius:999px;border:2px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;transition:background .2s,color .2s}
+.tabs button:hover{background:rgba(255,255,255,.1)}
+.tabs button[aria-pressed="true"]{background:var(--ink);color:#0A0710}
+
+/* stats */
+.stats ul{list-style:none;margin:0 auto;padding:0 28px;max-width:1160px;display:grid;grid-template-columns:repeat(4,1fr)}
+.stats li{padding:24px 28px 24px 0}
+.stats li+li{padding-left:28px;border-left:1px solid var(--line)}
+.stats strong{display:block;font-family:var(--serif);font-weight:700;font-size:clamp(54px,6.5vw,84px);line-height:1;color:var(--cobalt)}
+.stats span{display:block;margin-top:6px;color:var(--muted);font-size:15px;max-width:20ch}
+
+/* about */
+.about .grid{display:block;max-width:800px;margin:0 auto}
+.big{font-family:var(--serif);font-size:clamp(30px,3.6vw,44px);line-height:1.15;margin-bottom:16px;font-weight:700}
+.about p+p{margin-top:14px;color:var(--muted);max-width:58ch}
+.about .big+p{color:var(--muted)}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 30px;margin:24px 0 0;padding:20px 0 0;border-top:1px solid var(--line);list-style:none}
+.facts small{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.facts span{font-weight:500}
+
+/* strengths */
+.skill-grid{display:flex;flex-wrap:wrap;gap:22px}
+.skill{flex:1 1 calc(50% - 11px);position:relative;background:rgba(22,17,32,.8);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:18px;padding:30px;transition:transform .25s,box-shadow .25s}
+.skill:hover{transform:translateY(-4px);box-shadow:0 24px 50px -28px rgba(16,27,56,.4)}
+.skill svg{width:40px;height:40px;stroke:var(--cobalt);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-bottom:16px}
+.skill h3{font-size:34px;margin-bottom:8px}
+.skill p{color:var(--muted);font-size:16px}
+.skill.lead{background:var(--navy);border-color:#4A3470;color:#F3EEF9}
+.skill.lead p{color:#CBD2E2}.skill.lead svg{stroke:var(--gold2)}
+.skill.lead .tags li{background:transparent;border-color:#6B4A9C;color:#EFE6FA}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0;list-style:none}
+.tags li{font-size:14px;padding:4px 14px;border-radius:999px;border:1px solid var(--line);background:var(--paper)}
+
+/* experience */
+.job{display:grid;grid-template-columns:230px 1fr;gap:44px;padding:24px 0;border-top:1px solid var(--line)}
+.job:last-child{border-bottom:1px solid var(--line)}
+.when{font-family:var(--serif);font-size:28px;line-height:1.1;color:var(--cobalt);font-weight:700}
+.when small{display:block;font-family:var(--sans);font-size:14px;color:var(--muted);margin-top:6px;font-weight:400}
+.job h3{font-size:42px}
+.where{font-weight:700;margin:6px 0 12px}
+.job ul{margin:0;padding-left:20px;color:var(--muted);max-width:66ch}
+.job li{margin-bottom:8px}.job li::marker{color:var(--gold)}
+
+/* highlights */
+.hl-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.hl{background:rgba(22,17,32,.8);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:18px;padding:32px}
+.hl b{display:block;font-family:var(--serif);font-weight:700;font-size:clamp(48px,6vw,76px);line-height:1;color:var(--cobalt)}
+.hl h3{font-size:30px;margin:12px 0 6px}
+.hl p{color:var(--muted);font-size:16px}
+
+/* credentials */
+.creds{background:linear-gradient(160deg,var(--navy),var(--deep));color:#F3EEF9}
+.creds .eyebrow{color:var(--gold2)}
+.cred-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.cred{border:1px solid #4A3470;border-top:4px solid var(--gold);border-radius:14px;padding:30px;background:rgba(255,255,255,.04)}
+.cred h3{font-size:48px;color:var(--gold2);margin-bottom:8px}
+.cred p{color:#CBD2E2;font-size:16px}
+
+/* why */
+.reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:44px}
+.reasons h3{font-size:34px;margin-bottom:10px}
+.reasons p{color:var(--muted);font-size:16px}
+.reasons div{border-top:2px solid var(--cobalt);padding-top:20px}
+
+/* contact */
+.contact{background:radial-gradient(800px 460px at 15% 0%,#6D28D9 0%,transparent 70%),var(--deep);color:#F3EEF9;text-align:center;padding:50px 0}
+.contact .eyebrow{color:var(--gold2)}
+.contact h2{font-size:clamp(52px,9vw,120px);margin-bottom:16px}
+.contact p{max-width:46ch;margin:0 auto;color:#D8DDEA;font-size:19px}
+.contact .cta{justify-content:center}
+
+.foot{background:var(--deep);color:#9AA5BE;text-align:center;padding:24px 0;font-size:14px}
+.foot-wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.admin-login-link{color:var(--muted);text-decoration:none;font-size:13px;opacity:0.6;transition:opacity 0.2s}
+.admin-login-link:hover{opacity:1;color:var(--cobalt)}
+
+/* Admin Login Modal */
+.modal-overlay{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.85);backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.login-card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:32px;width:100%;max-width:400px;box-shadow:0 20px 50px rgba(0,0,0,0.6);text-align:center}
+.login-card h3{font-size:28px;margin-bottom:8px;color:var(--cobalt)}
+.login-card p{font-size:14px;color:var(--muted);margin-bottom:20px}
+.login-card input{width:100%;padding:12px 16px;border-radius:999px;border:1px solid var(--line);background:var(--ivory);color:var(--ink);font:inherit;font-size:15px;margin-bottom:16px;text-align:center}
+.login-card .actions{display:flex;gap:10px;justify-content:center}
+
+/* Admin In-Page Editing Visual Feedback */
+body.admin-active [data-editable]{
+  outline:1px dashed var(--cobalt) !important;
+  outline-offset:3px;
+  cursor:text;
+}
+body.admin-active [data-editable]:focus{
+  outline:2px solid var(--gold) !important;
+  background:rgba(199,125,255,.1);
+}
+.admin-bar{
+  display:none;
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  z-index:9999;
+  background:var(--paper);
+  border:2px solid var(--cobalt);
+  border-radius:999px;
+  padding:8px 18px;
+  box-shadow:0 10px 40px rgba(0,0,0,.6);
+  align-items:center;
+  gap:12px;
+}
+body.admin-active .admin-bar{display:flex}
+
+/* motion */
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.hero-copy>*{animation:rise .8s both}
+.hero-copy>*:nth-child(2){animation-delay:.08s}.hero-copy>*:nth-child(3){animation-delay:.16s}.hero-copy>*:nth-child(4){animation-delay:.24s}.hero-copy>*:nth-child(5){animation-delay:.32s}
+
+@media (max-width:900px){
+  section{padding:40px 0}
+  .nav ul{display:none}
+  .hero{align-items:flex-start;padding-top:20px;min-height:auto}
+  .hero-copy{max-width:none}
+  .scroll{display:none}
+  .stats ul{grid-template-columns:repeat(2,1fr)}
+  .stats li{padding:20px 18px 20px 0}.stats li+li{padding-left:0;border-left:0}.stats li:nth-child(even){padding-left:18px;border-left:1px solid var(--line)}.stats li:nth-child(n+3){border-top:1px solid var(--line)}
+  .about .grid{grid-template-columns:1fr;gap:30px}
+  .skill{flex-basis:100%}
+  .job{grid-template-columns:1fr;gap:10px}
+  .hl-grid,.cred-grid,.reasons{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero-copy>*{animation:none}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .btn,.skill,.tabs button,.nav ul a::after{transition:none}
+}
+</style>
+</head>
+<body>
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  }
+})();
+</script>
+
+<div class="backdrop" id="backdrop" aria-hidden="true"><img src="mary-seated.webp" alt="" width="900" height="1543"></div>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Mary Ogabo, home" data-editable="logo">M<i>.</i>Ogabo</a>
+    <ul>
+      <li><a href="#about">About</a></li><li><a href="#strengths">Strengths</a></li><li><a href="#experience">Experience</a></li><li><a href="#highlights">Highlights</a></li><li><a href="#credentials">Credentials</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button type="button" class="theme-btn" id="themeToggle" aria-label="Toggle light/dark mode">
+        <span id="themeIcon">☀️</span> <span id="themeText">Light</span>
+      </button>
+      <a class="btn solid" href="#contact">Hire Mary</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="chip" data-editable="chip"><b>PHRi</b> Certified HR professional · Lagos</span>
+      <h1 data-editable="hero-title">Mary <em>Ogabo</em></h1>
+      <p class="role" id="roleLine" data-editable="hero-role">HR and people operations professional</p>
+      <p class="lede" id="ledeLine" data-editable="hero-lede">Five years keeping employee records, onboarding, employee relations and payroll inputs accurate for teams of 450 to 2,000+ people.</p>
+      <div class="cta">
+        <a class="btn solid" href="https://wa.me/2348106837179" target="_blank" rel="noopener" data-editable="cta-wa">Message on WhatsApp</a>
+        <a class="btn ghost" href="mailto:Ogabomary94@gmail.com?subject=Opportunity%20for%20Mary%20Ogabo" data-editable="cta-mail">Email Mary</a>
+        <a class="btn ghost" href="tel:+2348106837179" data-editable="cta-call">Call</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="switch" aria-label="View Mary's profile by role">
+  <div class="wrap"><strong data-editable="switch-label">See Mary's profile for</strong>
+    <div class="tabs" role="group">
+      <button type="button" data-k="all" aria-pressed="true">All roles</button>
+      <button type="button" data-k="hr" aria-pressed="false">HR and employee relations</button>
+      <button type="button" data-k="admin" aria-pressed="false">Administration</button>
+      <button type="button" data-k="fin" aria-pressed="false">Payroll and finance support</button>
+    </div></div>
+</nav>
+
+<aside class="stats" aria-label="Career at a glance">
+  <ul class="reveal">
+    <li><strong data-editable="stat1-val">5+</strong><span data-editable="stat1-lbl">years in HR operations</span></li>
+    <li><strong data-editable="stat2-val">450+</strong><span data-editable="stat2-lbl">employee records managed across two states</span></li>
+    <li><strong data-editable="stat3-val">2,000+</strong><span data-editable="stat3-lbl">employees supported in HR administration</span></li>
+    <li><strong data-editable="stat4-val">4</strong><span data-editable="stat4-lbl">employers across construction, bottling and events</span></li>
+  </ul>
+</aside>
+
+<main>
+<section class="about" id="about">
+  <div class="wrap grid">
+    <div class="reveal">
+      <span class="eyebrow" data-editable="about-eyebrow">About</span>
+      <h2 data-editable="about-title">Hello, I'm Mary</h2>
+      <p class="big" data-editable="about-big">I help organisations treat people fairly and run HR without loose ends.</p>
+      <p data-editable="about-p1">That means accurate records, smooth onboarding, concerns resolved early and policies applied consistently. I have worked across construction, bottling and events, from supporting a workforce of 2,000+ to managing the HR records of 450+ employees across two states.</p>
+      <p data-editable="about-p2">I advise managers on people matters, handle grievance and disciplinary processes, and give payroll the clean attendance, leave and employee data it depends on. My accounting background (ND and HND) keeps me comfortable with numbers.</p>
+      <ul class="facts">
+        <li><small data-editable="fact1-lbl">Based in</small><span data-editable="fact1-val">Lagos, Nigeria</span></li>
+        <li><small data-editable="fact2-lbl">Certified</small><span data-editable="fact2-val">PHRi (HRCI), 2025</span></li>
+        <li><small data-editable="fact3-lbl">Studying</small><span data-editable="fact3-val">CIPM, in progress</span></li>
+        <li><small data-editable="fact4-lbl">Education</small><span data-editable="fact4-val">HND Accounting, 2019</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="skills" id="strengths">
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow" data-editable="strengths-eyebrow">Strengths</span>
+    <h2 data-editable="strengths-title">What I bring to your team</h2></div>
+    <div class="skill-grid">
+      <div class="skill reveal" id="s-ops"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M5 12a3 3 0 0 1 3-3h8l4 4h12a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3z"/><path d="M13 22h14M13 27h9"/></svg><h3 data-editable="sk1-title">HR operations</h3><p data-editable="sk1-desc">Records, documentation and processes that stay accurate and audit-ready.</p>
+        <ul class="tags"><li>Employee records</li><li>HR administration</li><li>Onboarding and induction</li><li>Exit processes</li></ul></div>
+      <div class="skill reveal" id="s-er"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 10h18a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H15l-6 5v-5H6a3 3 0 0 1-3-3v-8a3 3 0 0 1 3-3z"/><path d="M30 17h4a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3h-1v4l-5-4h-6"/></svg><h3 data-editable="sk2-title">Employee relations</h3><p data-editable="sk2-desc">Early, fair handling of concerns, with management kept informed.</p>
+        <ul class="tags"><li>Grievances</li><li>Disciplinary support</li><li>Conflict resolution</li><li>Employee engagement</li></ul></div>
+      <div class="skill reveal" id="s-rec"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="17" cy="14" r="6"/><path d="M5 33c0-6 5-10 12-10s12 4 12 10"/><circle cx="31" cy="27" r="5"/><path d="M35 31l4 4"/></svg><h3 data-editable="sk3-title">Recruitment</h3><p data-editable="sk3-desc">From job posting to first day, with candidates kept informed.</p>
+        <ul class="tags"><li>Sourcing</li><li>CV screening</li><li>Interview scheduling</li><li>Selection</li></ul></div>
+      <div class="skill reveal" id="s-pay"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="8" y="4" width="24" height="32" rx="3"/><path d="M13 11h14M13 19h3M19 19h3M25 19h2M13 25h3M19 25h3M25 25h2M13 31h3M19 31h8"/></svg><h3 data-editable="sk4-title">Payroll and finance support</h3><p data-editable="sk4-desc">Reliable inputs for payroll, backed by an accounting education.</p>
+        <ul class="tags"><li>Attendance tracking</li><li>Leave management</li><li>Employee data accuracy</li><li>HR policy compliance</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow" data-editable="exp-eyebrow">Work</span>
+    <h2 data-editable="exp-title">Experience</h2></div>
+    <div class="job reveal">
+      <div class="when" data-editable="j1-when">Nov 2022 to present<small data-editable="j1-sub">Part-time, event-based</small></div>
+      <div><h3 data-editable="j1-title">Employee Relations Officer</h3><p class="where" data-editable="j1-where">The Pampe Events Company</p>
+        <ul>
+          <li data-editable="j1-bullet1">Handle day-to-day employee relations and resolve workplace concerns and conflicts promptly.</li>
+          <li data-editable="j1-bullet2">Run recruitment from sourcing and screening to interview scheduling and onboarding.</li>
+          <li data-editable="j1-bullet3">Apply HR policy consistently across recruitment, onboarding, training, discipline, grievances, absence and exits.</li>
+          <li data-editable="j1-bullet4">Keep employee records and HR databases accurate and up to company standard.</li>
+          <li data-editable="j1-bullet5">Guide employees on HR policy and grievance procedures.</li>
+          <li data-editable="j1-bullet6">Supply payroll with accurate attendance, leave and employee data.</li>
+          <li data-editable="j1-bullet7">Work with management on engagement initiatives that improve morale and productivity.</li>
+        </ul></div>
+    </div>
+    <div class="job reveal">
+      <div class="when" data-editable="j2-when">Apr 2022 to 2025</div>
+      <div><h3 data-editable="j2-title">HR / Admin Officer</h3><p class="where" data-editable="j2-where">Craneburg Construction Company</p>
+        <ul>
+          <li data-editable="j2-bullet1">Managed and maintained HR records for 450+ employees across two states.</li>
+          <li data-editable="j2-bullet2">Led onsite onboarding and induction so new hires settled in smoothly.</li>
+          <li data-editable="j2-bullet3">Supported documentation, disciplinary procedures, grievances, absence management and employee queries.</li>
+          <li data-editable="j2-bullet4">Advised management on people matters and supported effective employee relations.</li>
+          <li data-editable="j2-bullet5">Supported payroll through attendance tracking, leave management and accurate employee data.</li>
+          <li data-editable="j2-bullet6">Managed exits, including exit interviews and knowledge-transfer documentation.</li>
+        </ul></div>
+    </div>
+    <div class="job reveal">
+      <div class="when" data-editable="j3-when">Mar 2021 to Apr 2022<small data-editable="j3-sub">Contract, DELOG</small></div>
+      <div><h3 data-editable="j3-title">HR / Admin Assistant</h3><p class="where" data-editable="j3-where">Seven Up Bottling Company</p>
+        <ul>
+          <li data-editable="j3-bullet1">Provided HR administrative support for 2,000+ employees.</li>
+          <li data-editable="j3-bullet2">Supported recruitment through job postings, CV screening, interview scheduling and onboarding.</li>
+          <li data-editable="j3-bullet3">Maintained employee records and processed leave requests.</li>
+          <li data-editable="j3-bullet4">Introduced an improved HR filing system that cut document retrieval time.</li>
+        </ul></div>
+    </div>
+    <div class="job reveal">
+      <div class="when" data-editable="j4-when">Mar 2020 to Feb 2021<small data-editable="j4-sub">NYSC</small></div>
+      <div><h3 data-editable="j4-title">HR Intern</h3><p class="where" data-editable="j4-where">Seven Up Bottling Company</p>
+        <ul>
+          <li data-editable="j4-bullet1">Supported onboarding, induction, HR documentation and personnel records.</li>
+          <li data-editable="j4-bullet2">Helped coordinate training: participant onboarding, materials and logistics.</li>
+        </ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="highlights">
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow" data-editable="hl-eyebrow">Highlights</span>
+    <h2 data-editable="hl-title">Results that show</h2></div>
+    <div class="hl-grid">
+      <div class="hl reveal"><b data-editable="hl1-num">450+</b><h3 data-editable="hl1-title">Records across two states</h3><p data-editable="hl1-desc">Managed and maintained HR records for 450+ employees at Craneburg Construction Company.</p></div>
+      <div class="hl reveal"><b data-editable="hl2-num">2,000+</b><h3 data-editable="hl2-title">Employees supported</h3><p data-editable="hl2-desc">Provided HR administrative support at Seven Up Bottling Company on a contract basis.</p></div>
+      <div class="hl reveal"><b data-editable="hl3-num">Faster</b><h3 data-editable="hl3-title">A better filing system</h3><p data-editable="hl3-desc">Introduced an improved HR filing system that reduced document retrieval time.</p></div>
+      <div class="hl reveal"><b data-editable="hl4-num">Clean</b><h3 data-editable="hl4-title">Exits handled end to end</h3><p data-editable="hl4-desc">Ran exit interviews and knowledge-transfer documentation so nothing was lost when people left.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="creds" id="credentials">
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow" data-editable="cred-eyebrow">Credentials</span>
+    <h2 data-editable="cred-title">Qualified to do the job</h2></div>
+    <div class="cred-grid">
+      <div class="cred reveal"><h3 data-editable="cr1-title">PHRi</h3><p data-editable="cr1-desc">Professional in Human Resources, International. HRCI, 2025.</p></div>
+      <div class="cred reveal"><h3 data-editable="cr2-title">CIPM</h3><p data-editable="cr2-desc">Chartered Institute of Personnel Management. Currently pursuing.</p></div>
+      <div class="cred reveal"><h3 data-editable="cr3-title">HND and ND</h3><p data-editable="cr3-desc">Accounting. Our Saviours Institute of Science, Agriculture and Technology, Enugu State. HND 2019, ND 2016.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow" data-editable="why-eyebrow">Why Mary</span>
+    <h2 data-editable="why-title">Why hire Mary</h2></div>
+    <div class="reasons">
+      <div class="reveal"><h3 data-editable="r1-title">Certified and growing</h3><p data-editable="r1-desc">PHRi certified, with CIPM in progress, so her practice follows recognised standards.</p></div>
+      <div class="reveal"><h3 data-editable="r2-title">Proven at scale</h3><p data-editable="r2-desc">Has supported HR for 2,000+ employees and run records for 450+ across two states.</p></div>
+      <div class="reveal"><h3 data-editable="r3-title">Ready across industries</h3><p data-editable="r3-desc">Experience in construction, manufacturing and events means she settles into a new workplace quickly.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap reveal">
+    <span class="eyebrow" data-editable="contact-eyebrow">Contact</span>
+    <h2 data-editable="contact-title">Let's work together</h2>
+    <p data-editable="contact-desc">Mary is open to HR, HR administration, employee relations and recruitment roles. Message her and she will respond quickly.</p>
+    <div class="cta">
+      <a class="btn gold" href="https://wa.me/2348106837179" target="_blank" rel="noopener" data-editable="contact-wa">Message on WhatsApp</a>
+      <a class="btn light" href="mailto:Ogabomary94@gmail.com?subject=Opportunity%20for%20Mary%20Ogabo" data-editable="contact-mail">Ogabomary94@gmail.com</a>
+      <a class="btn light" href="tel:+2348106837179" data-editable="contact-phone">+234 810 683 7179</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-wrap">
+    <div data-editable="footer-text">Mary Ogabo, PHRi · Lagos, Nigeria</div>
+    <a href="#admin-login" class="admin-login-link" id="openAdminLoginBtn">🔒 Admin Portal</a>
+  </div>
+</footer>
+
+<!-- Password Login Modal -->
+<div class="modal-overlay" id="loginModalOverlay">
+  <div class="login-card">
+    <h3>Admin Login</h3>
+    <p>Enter password to unlock live page editing mode</p>
+    <input type="password" id="adminPassInput" placeholder="Enter Admin Password">
+    <div class="actions">
+      <button type="button" class="btn ghost" id="cancelLoginBtn" style="min-height:40px;padding:0 20px;">Cancel</button>
+      <button type="button" class="btn solid" id="submitLoginBtn" style="min-height:40px;padding:0 20px;">Unlock</button>
+    </div>
+  </div>
+</div>
+
+<!-- Floating Admin Toolbar -->
+<div class="admin-bar" id="adminBar">
+  <span style="font-weight:700;font-size:14px;">✏️ Admin Mode Active</span>
+  <button type="button" class="btn solid" id="saveAllBtn" style="min-height:36px;padding:0 18px;font-size:14px;">Save & Publish Changes</button>
+  <button type="button" class="btn ghost" id="exitAdminBtn" style="min-height:36px;padding:0 14px;font-size:13px;">Exit</button>
+</div>
+
+<script>
+(function(){
+/* theme toggle logic */
+var toggleBtn = document.getElementById('themeToggle');
+var themeIcon = document.getElementById('themeIcon');
+var themeText = document.getElementById('themeText');
+
+function updateThemeUI() {
+  var isLight = document.documentElement.getAttribute('data-theme') === 'light';
+  themeIcon.textContent = isLight ? '🌙' : '☀️';
+  themeText.textContent = isLight ? 'Dark' : 'Light';
+}
+
+updateThemeUI();
+
+toggleBtn.addEventListener('click', function() {
+  var isLight = document.documentElement.getAttribute('data-theme') === 'light';
+  var newTheme = isLight ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+  updateThemeUI();
+});
+
+/* scroll reveal */
+var els=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){io.observe(el)});
+}else{els.forEach(function(el){el.classList.add('in')})}
+
+/* role views */
+var R={
+ all:{role:"HR and people operations professional",lede:"Five years keeping employee records, onboarding, employee relations and payroll inputs accurate for teams of 450 to 2,000+ people.",order:["ops","er","rec","pay"]},
+ hr:{role:"HR and employee relations professional",lede:"Resolves workplace concerns early, runs recruitment from sourcing to onboarding and applies HR policy consistently.",order:["er","ops","rec","pay"]},
+ admin:{role:"HR and office administration professional",lede:"Keeps records, filing, onboarding and documentation accurate and easy to retrieve for teams of 450 to 2,000+ people.",order:["ops","pay","rec","er"]},
+ fin:{role:"HR payroll-support professional with an accounting background",lede:"Accounting HND and ND plus five years of accurate attendance, leave and employee data, the inputs payroll depends on.",order:["pay","ops","er","rec"]}
+};
+var tags={
+"Handle day-to-day":"hr","Run recruitment":"hr","Apply HR policy":"hr admin fin","Keep employee records":"hr admin fin","Guide employees":"hr","Supply payroll":"fin","Work with management":"hr",
+"Managed and maintained":"hr admin fin","Led onsite":"hr admin","Supported documentation":"hr admin","Advised management":"hr","Supported payroll":"fin","Managed exits":"hr admin",
+"Provided HR administrative":"admin fin","Supported recruitment":"hr","Maintained employee records":"admin fin","Introduced an improved":"admin","Supported onboarding":"hr admin","Helped coordinate":"admin"};
+var items=[].slice.call(document.querySelectorAll('.job li'));
+items.forEach(function(li){for(var k in tags){if(li.textContent.indexOf(k)===0){li.dataset.r=tags[k];break}}});
+var btns=document.querySelectorAll('.tabs button');
+function set(k){
+  var r=R[k];
+  document.getElementById('roleLine').textContent=r.role;
+  document.getElementById('ledeLine').textContent=r.lede;
+  btns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.k===k?'true':'false')});
+  r.order.forEach(function(id,i){var e=document.getElementById('s-'+id);e.style.order=i;e.classList.toggle('lead',k!=='all'&&i===0)});
+  items.forEach(function(li){li.style.display=(k==='all'||!li.dataset.r||li.dataset.r.split(' ').indexOf(k)>-1)?'':'none'});
+}
+btns.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.k)})});
+
+/* Admin In-Page Editing Mode with Password Protection */
+var editables = document.querySelectorAll('[data-editable]');
+var openAdminLoginBtn = document.getElementById('openAdminLoginBtn');
+var loginModalOverlay = document.getElementById('loginModalOverlay');
+var cancelLoginBtn = document.getElementById('cancelLoginBtn');
+var submitLoginBtn = document.getElementById('submitLoginBtn');
+var adminPassInput = document.getElementById('adminPassInput');
+var saveAllBtn = document.getElementById('saveAllBtn');
+var exitAdminBtn = document.getElementById('exitAdminBtn');
+var isAdmin = false;
+
+// Auto restore all previously published edits
+function restoreAllSavedEdits(){
+  editables.forEach(function(el){
+    var key = 'page_edit_' + el.getAttribute('data-editable');
+    var savedVal = localStorage.getItem(key);
+    if(savedVal !== null){
+      el.innerHTML = savedVal;
+    }
+  });
+}
+restoreAllSavedEdits();
+
+function setAdminMode(active){
+  isAdmin = active;
+  document.body.classList.toggle('admin-active', isAdmin);
+  editables.forEach(function(el){
+    el.contentEditable = isAdmin ? "true" : "false";
+  });
+}
+
+function openLoginModal(){
+  loginModalOverlay.classList.add('open');
+  adminPassInput.value = '';
+  adminPassInput.focus();
+}
+
+function closeLoginModal(){
+  loginModalOverlay.classList.remove('open');
+}
+
+openAdminLoginBtn.addEventListener('click', function(e){
+  e.preventDefault();
+  if(!isAdmin){
+    openLoginModal();
+  }
+});
+
+cancelLoginBtn.addEventListener('click', closeLoginModal);
+
+function attemptLogin(){
+  var pass = adminPassInput.value;
+  if(pass === 'mary' || pass === 'admin123' || pass === '1234'){
+    closeLoginModal();
+    setAdminMode(true);
+  } else {
+    alert('Incorrect Password. Access Denied.');
+  }
+}
+
+submitLoginBtn.addEventListener('click', attemptLogin);
+adminPassInput.addEventListener('keydown', function(e){
+  if(e.key === 'Enter') attemptLogin();
+});
+
+window.addEventListener('keydown', function(e){
+  if((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 'a'){
+    e.preventDefault();
+    if(!isAdmin) openLoginModal();
+  }
+});
+
+saveAllBtn.addEventListener('click', function(){
+  editables.forEach(function(el){
+    var key = 'page_edit_' + el.getAttribute('data-editable');
+    localStorage.setItem(key, el.innerHTML);
+  });
+  alert('All changes saved and published!');
+  setAdminMode(false);
+});
+
+exitAdminBtn.addEventListener('click', function(){
+  setAdminMode(false);
+});
+
+})();
+</script>
+</body>
+</html>
